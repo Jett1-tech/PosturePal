@@ -14,10 +14,10 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
 
-          <Route path=`${BASE_FE_URL}/admin/*` element={<AdminDashboard />} />
-          <Route path=`${BASE_FE_URL}/checkout` element={<Checkout />} />
+          <Route path={`${BASE_FE_URL}/admin/*`} element={<AdminDashboard />} />
+          <Route path={`${BASE_FE_URL}/checkout`} element={<Checkout />} />
 
-          <Route path=`${BASE_FE_URL}/api/cancel` element={<Cancel />} />
+          <Route path={`${BASE_FE_URL}/api/cancel`} element={<Cancel />} />
         </Routes>
       </div>
     </Router>
