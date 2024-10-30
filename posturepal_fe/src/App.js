@@ -5,7 +5,7 @@ import LandingPage from "./Pages/landingPage";
 import AdminDashboard from "./Components/admin-dashboard/AdminDashboard"
 import Checkout from "./Components/Checkout/Checkout"
 import Cancel from "./Cancel"
-
+const BASE_FE_URL = process.env.REACT_APP_BASE_FE_URL;
 function App() {
   return (
     <Router>
@@ -14,10 +14,10 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
 
-          <Route path="/admin/*" element={<AdminDashboard />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path=`${BASE_FE_URL}/admin/*` element={<AdminDashboard />} />
+          <Route path=`${BASE_FE_URL}/checkout` element={<Checkout />} />
 
-          <Route path="/api/cancel" element={<Cancel />} />
+          <Route path=`${BASE_FE_URL}/api/cancel` element={<Cancel />} />
         </Routes>
       </div>
     </Router>
