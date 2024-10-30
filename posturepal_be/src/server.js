@@ -16,7 +16,7 @@ db.connect();
 // Middleware
 app.use(
   cors({
-    origin: [https://posturepal-8qk9.onrender.com],
+    origin: ["https://posture-pal-fe.vercel.app"],
     credentials: true,
   })
 );
