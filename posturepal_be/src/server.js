@@ -14,7 +14,13 @@ app.use(morgan('dev'))
 db.connect();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [https://posturepal-8qk9.onrender.com],
+    credentials: true,
+  })
+);
+app.use(express.json());
 app.use(express.json());
 
 // Cấu hình session
