@@ -1,0 +1,16 @@
+.color-tags-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 4px;
+}
+
+.color-tag {
+   transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.color-tag.selected {
+   transform: translateY(-5px);
+   background-color: rgba(0, 0, 0, 0.1);
+   /* Optional: Change the background color when selected */
+   color: #695d5d;
+}
