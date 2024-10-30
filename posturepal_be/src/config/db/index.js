@@ -2,22 +2,12 @@ const mongoose = require("mongoose");
 
 async function connect() {
   try {
-    const options = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    };
-
-    // Sử dụng biến môi trường
-    const uri = process.env.MONGODB_URI;
-    if (!uri) {
-      throw new Error('MONGODB_URI is not defined in environment variables');
-    }
-
-    await mongoose.connect(uri, options);
+    const uri =
+      "mongodb+srv://root:123@cluster0.ld5nn.mongodb.net/PosturePal?retryWrites=true&w=majority&appName=Cluster0";
+    await mongoose.connect(uri);
     console.log("Connect to DB Successfully");
   } catch (error) {
-    console.error("Connect to DB failure:", error.message);
-    throw error;
+    console.log("Connect to DB failure");
   }
 }
 
