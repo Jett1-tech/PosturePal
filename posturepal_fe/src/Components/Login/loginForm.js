@@ -18,7 +18,12 @@ const LoginForm = ({ switchToSignUp }) => {
       const response = await axios.post(`${BASE_API_URL}/api/user/login`, {
         username,
         password,
-      });
+      },{
+          withCredentials: true,  // Thêm cái này để xử lý CORS
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
 
       localStorage.setItem("token", response.data.token);
       toast.success("Login successful!");
