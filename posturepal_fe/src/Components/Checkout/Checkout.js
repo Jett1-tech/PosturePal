@@ -132,7 +132,7 @@ export default function Checkout() {
 
 
   const handleDiscountCodeChange = (e) => setDiscountCode(e.target.value);
-  const shippingFee = 1000;
+  const shippingFee = 25000;
 
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => {
